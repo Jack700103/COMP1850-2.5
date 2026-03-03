@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+    printf("Prime numbers between 1-100:\n");
+    for(int num = 2; num <= 100; num++) {
+        int is_prime = 1;
+        for(int i = 2; i <= (int)sqrt(num); i++) {
+            if(num % i == 0) {
+                is_prime = 0;
+                break;
+            }
+        }
+        if(is_prime) printf("%d ", num);
+    }
+    return 0;
+}
